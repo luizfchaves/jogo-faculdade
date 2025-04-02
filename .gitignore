@@ -4,16 +4,3 @@ Library/
 /Builds/
 /Logs/
 /UserSettings/
-*.user
-*.user.meta
-*.csproj
-*.sln
-*.tmp
-*.DS_Store
-*.meta
-*.unitypackage.meta
-*.exe
-*.ipa
-*.apk
-*.aab
-*.unitypackage
