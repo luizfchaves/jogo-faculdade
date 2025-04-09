@@ -601,7 +601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5092653183915511926, guid: d8451aae21606214ca2593351ab2c811, type: 3}
       propertyPath: m_TagString
-      value: Tower
+      value: Castle
       objectReference: {fileID: 0}
     - target: {fileID: 7630006568278333428, guid: d8451aae21606214ca2593351ab2c811, type: 3}
       propertyPath: m_LocalPosition.x

@@ -4,3 +4,7 @@ Library/
 /Builds/
 /Logs/
 /UserSettings/
+
+Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
+Close plugin.sln

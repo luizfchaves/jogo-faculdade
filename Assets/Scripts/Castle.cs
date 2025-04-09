@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Tower : MonoBehaviour {
+public class Castle : MonoBehaviour {
     public float currentHealth = 100f;
 
   

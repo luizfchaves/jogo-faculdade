@@ -5,38 +5,38 @@ public class Minion : MonoBehaviour {
     private NavMeshAgent agent;
     private GameObject target;
     public float hitDamage = 10f;
-    public string towerTag = "Tower";
+    public string castleTag = "Castle";
     static public float targetSwitchInterval = 2f;
 
     public float numeroTeste = 1f;
 
     private float timeSinceLastTargetSwitch = targetSwitchInterval + 1;
 
-    GameObject GetClosestTower() {
-        GameObject[] towers  = GameObject.FindGameObjectsWithTag(towerTag);
+    GameObject GetClosestCastle() {
+        GameObject[] castles  = GameObject.FindGameObjectsWithTag(castleTag);
 
         float closestDistance = Mathf.Infinity;
-        GameObject closestTower = null;
+        GameObject closestCastle = null;
         Vector3 currentPosition = transform.position;
 
-        foreach(GameObject tower in towers){
-            float distance = Vector3.Distance(currentPosition, tower.transform.position);
+        foreach(GameObject castle in castles){
+            float distance = Vector3.Distance(currentPosition, castle.transform.position);
 
             if(distance < closestDistance){
                 closestDistance = distance;
-                closestTower = tower;
+                closestCastle = castle;
             }
         }
 
-        Debug.Log("Closest tower: " + " "+closestTower.transform.position.y + " "+ closestTower.transform.position.x + " "+ closestTower.transform.position.z);
-        return closestTower;
+        Debug.Log("Closest tower: " + " "+closestCastle.transform.position.y + " "+ closestCastle.transform.position.x + " "+ closestCastle.transform.position.z);
+        return closestCastle;
     }
 
     void FindAndSetTarget() {
         timeSinceLastTargetSwitch += Time.deltaTime;
         if(timeSinceLastTargetSwitch >= targetSwitchInterval){
             timeSinceLastTargetSwitch = 0f;
-            target = GetClosestTower();
+            target = GetClosestCastle();
 
             if(target == null ){
                 if(agent.isOnNavMesh){
@@ -44,10 +44,10 @@ public class Minion : MonoBehaviour {
                 }
                 return;
             }
-            Debug.Log("target tower: " + " "+target.transform.position.y + " "+ target.transform.position.x + " "+ target.transform.position.z);
+            Debug.Log("target castle: " + " "+target.transform.position.y + " "+ target.transform.position.x + " "+ target.transform.position.z);
 
             Vector3 direction = target.transform.position - transform.position;
-            Debug.Log("direction tower: " + " "+direction.y + " "+ direction.x + " "+ direction.z);
+            Debug.Log("direction castle: " + " "+direction.y + " "+ direction.x + " "+ direction.z);
             agent.ResetPath();
             agent.SetDestination(target.transform.position);
         }
@@ -61,8 +61,8 @@ public class Minion : MonoBehaviour {
         Vector3 currentPosition = transform.position;
         float distance = Vector3.Distance(currentPosition, target.transform.position);
         if(distance < numeroTeste){
-            Tower tower = target.GetComponent<Tower>();
-            tower.Hit(hitDamage);
+            Castle castle = target.GetComponent<Castle>();
+            castle.Hit(hitDamage);
             Destroy(gameObject);
         }
     }
