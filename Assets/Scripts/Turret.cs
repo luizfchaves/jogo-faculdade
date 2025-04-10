@@ -2,6 +2,9 @@ using UnityEngine;
 using System.Collections;
 
 public class Turret : MonoBehaviour {
+  public string turretName = "Turret";
+  public int price = 10;
+
   [Header("Targeting Parameters")]
   public float detectionRadius = 5f;
   private GameObject closestTarget = null;

@@ -27,6 +27,11 @@ public class Health : MonoBehaviour {
 
     if (health <= 0){
       Destroy(gameObject);
+      // add 10 coins to gameManager
+      GameManager gameManager = FindFirstObjectByType<GameManager>();
+      if (gameManager != null) {
+        gameManager.handleMinionDeath();
+      }
     }
   }
 
