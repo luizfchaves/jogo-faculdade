@@ -28,7 +28,7 @@ public class Minion : MonoBehaviour {
             }
         }
 
-        Debug.Log("Closest tower: " + " "+closestCastle.transform.position.y + " "+ closestCastle.transform.position.x + " "+ closestCastle.transform.position.z);
+        // Debug.Log("Closest tower: " + " "+closestCastle.transform.position.y + " "+ closestCastle.transform.position.x + " "+ closestCastle.transform.position.z);
         return closestCastle;
     }
 
@@ -44,10 +44,10 @@ public class Minion : MonoBehaviour {
                 }
                 return;
             }
-            Debug.Log("target castle: " + " "+target.transform.position.y + " "+ target.transform.position.x + " "+ target.transform.position.z);
+            // Debug.Log("target castle: " + " "+target.transform.position.y + " "+ target.transform.position.x + " "+ target.transform.position.z);
 
-            Vector3 direction = target.transform.position - transform.position;
-            Debug.Log("direction castle: " + " "+direction.y + " "+ direction.x + " "+ direction.z);
+            // Vector3 direction = target.transform.position - transform.position;
+            // Debug.Log("direction castle: " + " "+direction.y + " "+ direction.x + " "+ direction.z);
             agent.ResetPath();
             agent.SetDestination(target.transform.position);
         }
