@@ -1,8 +1,11 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour {
   [Header("Health")]
+  public float maxHealth;
+  public Slider slider;
   public float health;
 
   [Header("Poison")]
@@ -24,6 +27,8 @@ public class Health : MonoBehaviour {
 
   public void TakeDamage(float damage) {
     health -= damage;
+
+    slider.value = health;
 
     if (health <= 0){
       Destroy(gameObject);
@@ -69,6 +74,8 @@ public class Health : MonoBehaviour {
   }
 
   void Start() {
+    health = maxHealth;
+
     objectRenderer = GetComponentInChildren<Renderer>();
     originalColor = objectRenderer.material.color;
 
@@ -76,6 +83,6 @@ public class Health : MonoBehaviour {
   }
 
   void Update(){
-    HandlePoisonDamage();
+    HandlePoisonDamage(); 
   }
 }
