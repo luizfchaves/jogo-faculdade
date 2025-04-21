@@ -765,7 +765,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1730780623657992871}
-  - component: {fileID: 2914434107638834522}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -797,25 +796,6 @@ Transform:
   - {fileID: 6534456842629576281}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2914434107638834522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7175537582144055553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf5956b0db897a64c9ecb40eb2ed5681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrainTypes:
-  - row: 010000000000000001000000
-  - row: 010000000000000001000000
-  - row: 010000000000000001000000
-  WalkablePlace: {fileID: 0}
-  GrassPlace: {fileID: 0}
-  WaterPlace: {fileID: 0}
 --- !u!1 &7465525689435880604
 GameObject:
   m_ObjectHideFlags: 0

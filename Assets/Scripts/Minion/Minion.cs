@@ -28,7 +28,7 @@ public class Minion : MonoBehaviour {
             }
         }
 
-        // Debug.Log("Closest tower: " + " "+closestCastle.transform.position.y + " "+ closestCastle.transform.position.x + " "+ closestCastle.transform.position.z);
+        Debug.Log("Closest tower: " + " "+closestCastle.transform.position.y + " "+ closestCastle.transform.position.x + " "+ closestCastle.transform.position.z);
         return closestCastle;
     }
 
